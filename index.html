@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- For icons -->
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator BMI</h1>
+        <form id="bmiForm">
+            <div class="input-group">
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" required>
+                    <option value="male">Laki-Laki</option>
+                    <option value="female">Wanita</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" id="weight" placeholder="Masukkan berat badan" required>
+            </div>
+
+            <div class="input-group">
+                <label for="height">Tinggi Badan (cm):</label>
+                <input type="number" id="height" placeholder="Masukkan tinggi badan" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="age">Umur (tahun):</label>
+                <input type="number" id="age" placeholder="Masukkan umur anda" required>
+            </div>
+
+            <button type="submit" class="btn">Hitung BMI</button>
+        </form>
+        
+        <div id="result" class="hidden">
+            <h2>Hasil BMI</h2>
+            <p id="bmiValue"></p>
+            <p id="bmiCategory"></p>
+            <p id="bmiExplanation"></p>
+        </div>
+
+        <div id="history" class="hidden">
+            <h3>Riwayat BMI</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
